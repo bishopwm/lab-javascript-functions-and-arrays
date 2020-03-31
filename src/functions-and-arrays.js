@@ -17,12 +17,13 @@ var emptyArr=[]
 
 function findLongestWord(someArr){
   let longestWord = "";
+  if(someArr.length===0){
+    return null;
+  }
   for(let i=0; i<someArr.length; i++) {
     if(longestWord.length < someArr[i].length){
       longestWord=someArr[i]
-    } else if(someArr.length==0){
-      return null;
-    }
+    } 
   }
   console.log(longestWord);
   return longestWord;
