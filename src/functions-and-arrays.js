@@ -147,16 +147,16 @@ function doesWordExist(wordsArr, search){
   if(wordsArr.length === 0){
     return null;
   }
-  for(let word of wordsArr){
-    if(word === search){
-      return true;
-    } else {
-      return false;
-    }
+  let wordFound = false;
+  for(let i=0; i<wordsArr.length; i++){
+    if(wordsArr[i] === search){
+      wordFound=true;
+    } 
   }
+  return wordFound;
 }
 
-doesWordExist(wordsFind);
+doesWordExist(['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'], 'matter');
 
 // Iteration #7: Count repetition
 const wordsCount = [
